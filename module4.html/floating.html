@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--Fig. 4.15: floating.html-->
+<!--Floating elements-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flowing Text Around Floating Elements</title>
+  <style type ="text/css">
+      header    {background-color: lightgreen;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: .2em;}
+      p         {text-align: justify;
+                font-family: Verdana, Geneva, sans-serif;
+                margin: .5em;}
+      h1        {margin-top: 0px;}
+      .floated  {background-color: lightgrey;
+                font-size: 1.5em;
+                font-family: arial, Arial, Helvetica, sans-serif;
+                padding: .2em;
+                margin-left: .5em;
+                margin-bottom: .5em;
+                float: right;
+                text-align: right;
+                width: 50%;}
+        section {border: 1px solid black;}
+      </style>
+  </head>
+<body>
+  <header> <img src = "data:image/png;base64,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" alt = "Publix Super Market"/></header>
+    <section>
+      <h1 class = "floated">Publix Super Market Weekly Ad</h1>
+      <p>Publix Weekly Ad for week of February 9 through February 16. Included in this weekly advertisement are BOGO items. Some of these items are great for your Super Bowl party on Sunday. You will always get the best price when shopping at Publix for BOGO items.</p>
+    </section>
+    <section> 
+      <h1 class = "floated">Super Bowl Party must haves and recipes</h1>
+      <p>Your one stop shop for all your Super Bowl party supplies. BOGO ribs, BOGO, chips, BOGO soda, and all your party supply needs</p>
+    </section>
+
+  
+</body>
+</html>
+
+<!DOCTYPE html>
+<!--Fig. 4.12: width.html-->
+<!--Element dimensions and text alignment-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Dimensions</title>
+  <style type ="text/css">
+    p {background-color: lightgreen;
+      margin-bottom: .5em;
+      font-family: Arial, Helvetica, sans-serif;}
+  </style>
+  </head>
+<body>
+  <p style = "width: 100%; text-align: center">Publix Shopping Market </p>
+  <p style = "width: 100%; text-align: center"> Where Shopping Is A Pleasure</p>
+  <section style = "width: 80%; text-align: center"> Weekly Sales Advertisement with BOGOs </section>
+  <p style = "width: 20%; text-align: center; height: 150px; overflow: scroll"> Order Online </p>
+  <p style = "width: 20%; text-align: center; height: 150px; overflow: scroll"> Weekly BOGOs </p>
+  
+</body>
+</html>
